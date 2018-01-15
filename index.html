@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <title>4K Film House - Coming Soon</title>
+    <style>
+
+      * {
+      margin: 0;
+      padding: 0;
+      }
+
+      body {
+      display: flex;
+      align-items: center;
+      flex-flow: column;
+      }
+
+      #logo {
+      position: relative;
+      margin: 3rem auto;
+
+      }
+
+      #logo #small-reel, #logo #big-reel {
+
+        position: absolute;
+
+      }
+
+      #small-reel {
+      left: 158px;
+      top: 119px;
+      }
+
+      #big-reel {
+          top: 99px;
+      left: 251px;
+
+      }
+
+      #coming-soon {
+
+      font-size: 1.45rem;
+      font-family: "Avenir Next", Avenir, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="logo">
+      <img id="small-reel" src="reel.svg" alt="base of logo" />
+      <img id="big-reel" src="reel2.svg" alt="base of logo" />
+      <img src="base.svg" alt="base of logo" />
+    </div>
+    <p id="coming-soon">Coming Soon</p>
+    <script>
+
+      let $ = (x) => document.querySelector(x);
+
+      $("#small-reel").animate([{transform: "rotate(0)"}, {transform: "rotate(360deg)"}], {duration: 4000, iterations: Infinity});
+      $("#big-reel").animate([{transform: "rotate(0)"}, {transform: "rotate(360deg)"}], {duration: 8000, iterations: Infinity});
+
+      </script>
+  </body>
+</html>
